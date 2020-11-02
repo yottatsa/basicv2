@@ -284,7 +284,8 @@ public class MoSpeedCL {
 			System.out.println("\n!!! Error compiling: " + e.getMessage());
 			System.out.println("Error in line: " + nComp.getLastProcessedLine());
 			printCause(e);
-			exit(15);
+			// exit(15);
+			throw e;
 		}
 
 		if (is6502Platform(platform) && !holes.isEmpty()) {

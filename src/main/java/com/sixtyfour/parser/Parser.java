@@ -1108,7 +1108,7 @@ public class Parser {
 				inString = !inString;
 			}
 			if (!inString) {
-				if ("&!|~?'§{}[]°".indexOf(c) != -1) {
+				if ("!|~?'§{}[]°".indexOf(c) != -1) {
 					throw new RuntimeException("Syntax error: " + term + "/" + c);
 				}
 			}

@@ -591,8 +591,13 @@ public class AssemblyParser {
 		if (c >= 'a' && c <= 'z') {
 			c = (char) ((int) c - 32);
 		} else if (c >= 'A' && c <= 'Z') {
-			c = (char) ((int) c + 32);
+			c = (char) ((int) c + 128);
 		}
+
+		if ((int) c == 126) {
+			c = (char) 255;
+		}
+
 		return c;
 	}
 }
